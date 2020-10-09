@@ -1,18 +1,31 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>DJ's Drum Machine</title>
-  <meta name="description" content="DJs Drum Machine for fCC">
-  <meta name="author" content="DJsquared">
+    <title>DJ's Drum Machine</title>
+    <meta name="description" content="DJs Drum Machine for fCC">
+    <meta name="author" content="DJsquared">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
+    <div id="drum-machine">
+        <div id="display"> </div>
+        <div class="drum-pad-Q"><audio onclick="playAudio('/clips/clap.WAV')" id="Q" class="clip" /></div>
+        <div class="drum-pad-W"><audio onclick="playAudio('/clips/closedHH.WAV')" id="W" class="clip" /></div>
+        <div class="drum-pad-E"><audio onclick="playAudio('/clips/congalow.WAV')" id="E" class="clip" /></div>
+        <div class="drum-pad-A"><audio onclick="playAudio('/clips/cowbell.WAV')" id="A" class="clip" /></div>
+        <div class="drum-pad-S"><audio onclick="playAudio('/clips/hiconga.WAV')" id="S" class="clip" /></div>
+        <div class="drum-pad-D"><audio onclick="playAudio('/clips/lowconga.WAV')" id="D" class="clip" /></div>
+        <div class="drum-pad-Z"><audio onclick="playAudio('/clips/maracca.WAV')" id="Z" class="clip" /></div>
+        <div class="drum-pad-X"><audio onclick="playAudio('/clips/snare.WAV')" id="X" class="clip" /></div>
+        <div class="drum-pad-C"><audio onclick="playAudio('/clips/subbass.WAV')" id="C" class="clip" /></div>
+
+    </div>
 </body>
 </html>
