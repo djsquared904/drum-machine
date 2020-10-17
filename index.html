@@ -3,29 +3,39 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-
     <title>DJ's Drum Machine</title>
     <meta name="description" content="DJs Drum Machine for fCC">
     <meta name="author" content="DJsquared">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+    <script src=".\js\scripts.js"></script>
 </head>
 
 <body>
-    <script src="js/scripts.js"></script>
-    <div id="display"> </div>
-    <div id="drum-machine" class="grid" style="max-width: 25vw">
-        <div class="drum-pad" id="clap">Q<audio src="/clips/clap.WAV" onclick="playAudio('/clips/clap.WAV')" id="Q" class="clip" /></div>
-        <div class="drum-pad" id="closed hat">W<audio src="/clips/closedHH.WAV" onclick="playAudio('/clips/closedHH.WAV')" id="W" class="clip" /></div>
-        <div class="drum-pad" id="conga low">E<audio src="/clips/congalow.WAV" onclick="playAudio('/clips/congalow.WAV')" id="E" class="clip" /></div>
-        <div class="drum-pad" id="cowbell">A<audio src="/clips/cowbell.WAV" onclick="playAudio('/clips/cowbell.WAV')" id="A" class="clip" /></div>
-        <div class="drum-pad" id="conga hi">S<audio src="/clips/hiconga.WAV" onclick="playAudio('/clips/hiconga.WAV')" id="S" class="clip" /></div>
-        <div class="drum-pad" id="low conga">D<audio src="/clips/lowconga.WAV" onclick="playAudio('/clips/lowconga.WAV')" id="D" class="clip" /></div>
-        <div class="drum-pad" id="shaker">Z<audio src="clips/maracca.WAV" onclick="playAudio('/clips/maracca.WAV')" id="Z" class="clip" /></div>
-        <div class="drum-pad" id="snare">X<audio src="/clips/snare.WAV" onclick="playAudio('/clips/snare.WAV')" id="X" class="clip" /></div>
-        <div class="drum-pad" id="kick">C<audio src="/clips/subbass.WA" onclick="playAudio('/clips/subbass.WAV')" id="C" class="clip" /></div>
+    <h1 class="text-center">DJsquared's 808 Ripoff!</h1>
+    <div class="container">
+        <div class="row">
+            <div class="card text-center my-3 col-sm-auto" style="max-width: 25vw; margin: auto">
+                <div class="card-body">
+                    <div id="display" class="text-center">Mash that keyboard, dawg!</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="drum-machine" class="grid" style="max-width: 25vw">
+                <button class="drum-pad" id="clap" onclick="play('Q')">Q<audio src="./clips/clap.WAV" id="Q" class="clip" /></button>
+                <button class="drum-pad" id="closedHH" onclick="play('W')">W<audio src="./clips/closedHH.WAV" id="W" class="clip" /></button>
+                <button class="drum-pad" id="congalow" onclick="play('E')">E<audio src="./clips/congalow.WAV" id="E" class="clip" /></button>
+                <button class="drum-pad" id="cowbell" onclick="play('A')">A<audio src="./clips/cowbell.WAV" id="A" class="clip" /></button>
+                <button class="drum-pad" id="congahi" onclick="play('S')">S<audio src="./clips/hiconga.WAV" id="S" class="clip" /></button>
+                <button class="drum-pad" id="lowconga" onclick="play('D')">D<audio src="./clips/lowconga.WAV" id="D" class="clip" /></button>
+                <button class="drum-pad" id="shaker" onclick="play('Z')">Z<audio src="./clips/maracca.WAV" id="Z" class="clip" /></button>
+                <button class="drum-pad" id="snare" onclick="play('X')">X<audio src="./clips/snare.WAV" id="X" class="clip" /></button>
+                <button class="drum-pad" id="kick" onclick="play('C')">C<audio src="./clips/subbass.WAV" id="C" class="clip" /></button>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </body>
 </html>
